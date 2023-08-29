@@ -17,3 +17,15 @@ document.addEventListener('scroll', () => {
     console.log(1 - window.scrollY / homeHeight);
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+
+//Home 섹션 아래로 스크롤 반쯤 되면 Arrow 버튼 사라짐
+const arrow = document.querySelector('.arrow-up');
+const arrowHeight = arrow.offsetHeight;
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        arrow.classList.add('arrow-up--invisible');
+    } else {
+        arrow.classList.remove('arrow-up--invisible');
+    }
+});

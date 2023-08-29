@@ -445,6 +445,12 @@ button:focus {
     border-radius: 100%;
     text-align: center;
     box-shadow: 5px 5px 0px 0px var(--color-accent);
+    transition: all 300ms ease-in;
+    opacity: 1;
+}
+
+.arrow-up--invisible {
+    opacity: 0;
 }
 
 /* Footer */
